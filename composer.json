@@ -8,8 +8,6 @@
 	"require": {
 		"php": ">=5.5",
 		"doctrine/migrations": "~1.0@dev",
-		"kdyby/doctrine": "~2.0",
-		"kdyby/console": "~2.0",
 		"tracy/tracy": "~2.2"
 	},
 	"require-dev": {

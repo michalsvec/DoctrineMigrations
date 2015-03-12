@@ -7,7 +7,6 @@
 
 namespace Zenify\DoctrineMigrations\DI;
 
-use Kdyby\Console\DI\ConsoleExtension;
 use Nette\DI\CompilerExtension;
 use Nette\Utils\AssertionException;
 use Nette\Utils\Validators;
@@ -70,7 +69,7 @@ class MigrationsExtension extends CompilerExtension
 		foreach ($this->loadFromFile(__DIR__ . '/commands.neon') as $i => $class) {
 			$builder->addDefinition($this->prefix('command.' . $i))
 				->setClass($class)
-				->addTag(ConsoleExtension::COMMAND_TAG)
+//				->addTag(ConsoleExtension::COMMAND_TAG)
 				->addSetup('setMigrationConfiguration', [$configuration]);
 		}
 	}
